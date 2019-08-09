@@ -1,0 +1,90 @@
+<p-toast position="top-right"></p-toast>
+
+<div class="content ui-g">
+    <div class="ui-g-4">
+        <div class="ui-g">
+            <div class="ui-g-12 ui-sm-12 ui-md-12">
+                <div class="ui-g">
+                    <div class="ui-g-12 ui-sm-12">
+                        <span class="ui-float-label">
+                            <input id="float-input" type="text" [(ngModel)]="student.name" size="30" pInputText>
+                            <label for="float-input">Name</label>
+                        </span>
+                    </div>
+                    <div class="ui-g-12 ui-sm-12">
+                        <span class="ui-float-label">
+                            <input id="float-input" type="text" [(ngModel)]="student.nic" size="30" pInputText>
+                            <label for="float-input">NIC</label>
+                        </span>
+                    </div>
+                    <div class="ui-g-12 ui-sm-12">
+                        <span class="ui-float-label">
+                            <input id="float-input" type="text" [(ngModel)]="student.age" size="30" pInputText>
+                            <label for="float-input">Age</label>
+                        </span>
+                    </div>
+                    <div class="ui-g-12 ui-sm-12">
+                        <span class="ui-float-label">
+                            <input id="float-input" [(ngModel)]="student.address" type="text" size="30" pInputText>
+                            <label for="float-input">Address</label>
+                        </span>
+                    </div>
+                    <div class="ui-g-12 ui-sm-12">
+                        <span class="ui-float-label">
+                            <input id="float-input" type="text" [(ngModel)]="student.contactno" size="30" pInputText>
+                            <label for="float-input">Contact No</label>
+                        </span>
+                    </div>
+                    <div class="ui-g-12 ui-sm-12">
+                        <span class="ui-float-label">
+                            <input id="float-input" type="text" [(ngModel)]="student.email" size="30" pInputText>
+                            <label for="float-input">Emial</label>
+                        </span>
+                    </div>
+                    <div class="ui-g-12 ui-sm-12">
+                        <span class="ui-float-label">
+                            <p-multiSelect [options]="courses" [(ngModel)]="selectedCourses"></p-multiSelect>
+                            <label for="float-input">Course</label>
+                        </span>
+                    </div>
+
+                    <div class="ui-g" style=" margin-left: 133px;">
+                        <div class="ui-g-12 ui-sm-12">
+                            <button pButton class="pull-right ui-button ui-button-success" type="button" label="Save"
+                                (click)="saveStudent()" style="margin-left: 10px;"></button>
+                            <button pButton class="pull-right ui-button ui-button-warning" type="button" label="Reset"
+                                (click)="reset()"></button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="ui-g-8">
+        <div class="ui-g">
+            <div class="ui-g-8 ui-sm-8 ui-md-8">
+                <div class="ui-g">
+                    <p-table [columns]="cols" autoLayout="true" [value]="students" [paginator]="true" [rows]="5"
+                        selectionMode="single" [(selection)]="selectedRow" (onRowSelect)="onRowSelect($event)">
+                        <ng-template pTemplate="header" let-columns>
+                            <tr>
+                                <th *ngFor="let col of columns">
+                                    {{col.header}}
+                                </th>
+                            </tr>
+                        </ng-template>
+                        <ng-template pTemplate="body" let-rowData let-columns="columns">
+                            <tr [pSelectableRow]="rowData">
+                                <td *ngFor="let col of columns">
+                                    {{rowData[col.field]}}
+                                </td>
+                            </tr>
+                        </ng-template>
+                    </p-table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

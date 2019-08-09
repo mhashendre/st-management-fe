@@ -1,0 +1,38 @@
+[
+    {
+        "_id": "5d4c619f87cd351023075873",
+        "name": "Malith Hashendre De Silva",
+        "nic": "892702942v",
+        "address": "Regiland Estate, Batapola",
+        "email": "mhashendre@gmaqil.com",
+        "contactno": "0712244047",
+        "courses": [
+            "Engilish",
+            "German"
+        ]
+    },
+    {
+        "_id": "5d4cafd387cd351023075876",
+        "name": "Maheesha Prasadi",
+        "nic": "892702943v",
+        "address": "Regiland Estate, Batapola",
+        "email": "mhashendre@gmaqil.com",
+        "contactno": "0712244047",
+        "courses": [
+            "Engilish",
+            "German"
+        ]
+    },
+    {
+        "_id": "5d4cafe487cd351023075877",
+        "name": "Dimantha Chamindi",
+        "nic": "892702944v",
+        "address": "Regiland Estate, Batapola",
+        "email": "mhashendre@gmaqil.com",
+        "contactno": "0712244047",
+        "courses": [
+            "Engilish",
+            "German"
+        ]
+    }
+]
